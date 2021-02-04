@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "pastelitos");
+$mysqli = new mysqli("localhost", "root", "cruyff", "pastelitos");
 
 if($mysqli->connect_errno){
     echo "Fallo la conexión con la BD" .
