@@ -1,7 +1,7 @@
 
 <?php
-	require_once("../controlador/conexion.php");
-	require_once("../controlador/controlador.php");
+	require_once("../controllers/conexion.php");
+	require_once("../controllers/controlador.php");
 	
 	
 	class Modelo{

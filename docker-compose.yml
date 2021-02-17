@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  
+
+  db:
+    image: mariadb:10.5.8
+    restart: always
+    ports: 
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: dorime
+
+  adminer:
+    image: adminer:4.8.0
+    restart: always
+    ports:
+      - 8080:8080
+
+  php:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/html
+      - ./conf/apache2:/etc/apache2
+    restart: always
+    container_name: php_dev

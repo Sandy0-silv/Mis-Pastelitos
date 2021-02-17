@@ -1,6 +1,9 @@
 <?php
 @session_start();
-require_once("../modelo/modelo.php");
+require_once("../models/modelo.php");
+require_once("../controllers/conexion.php");
+	require_once("../controllers/controlador.php");
+
 $params = array(
     "nombre" => $_POST['nombre'],
     "apellido1" => $_POST['apellido1'],
@@ -12,6 +15,10 @@ $params = array(
     "contrasenia" => $_POST['contrasenia'],
     "edad" => $_POST['edad'],
 );
+
+// // $user = "root";
+// // $pass = "dorime";
+// // $dbh = new PDO('mysql:host=localhost;dbname=pastelitos', $user, $pass);
 
 
 $db = Database::getInstance();
@@ -29,7 +36,7 @@ if(empty($valor)){
 } else{
     echo "Usuario Registrado";
     echo "<script>alert('Usuario registrado exitosamente');
-  window.location.href='../index.html';
+  window.location.href='/';
 </script>";
 }
 ?>

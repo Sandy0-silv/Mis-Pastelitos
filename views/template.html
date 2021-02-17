@@ -27,6 +27,7 @@
 </head>
 
 <body>
+<!-- <h1><?php  ?></h1> -->
     <!-- Page Preloder -->
     <!-- <div id="preloder">
         <div class="loader"></div>
@@ -77,16 +78,16 @@
                                             <li>ENG</li>
                                         </ul>
                                     </li>-->
-                                    <li><a href="registro">Registrate</a> <span class="arrow_carrot-down"></span>
+                                    <li><a href="/registro">Registrate</a> <span class="arrow_carrot-down"></span>
 
                                     </li>
-                                    <li><a href="acceder">Acceder</a> <span class="arrow_carrot-down"></span>
+                                    <li><a href="/acceder">Acceder</a> <span class="arrow_carrot-down"></span>
 
                                     </li>
                                 </ul>
                             </div>
                             <div class="header__logo">
-                                <a href="inicio"><img src="img/logo.png" alt=""></a>
+                                <a href="/"><img src="img/logo.png" alt=""></a>
                             </div>
                             <div class="header__top__right">
                                 <div class="header__top__right__links">
@@ -110,9 +111,9 @@
                     <nav class="header__menu mobile-menu">
 
                         <ul>
-                            <li class="<?php echo ($_GET['solicitud'] == '' || $_GET['solicitud'] == 'inicio') ? 'active' : '' ?>"><a href="inicio">Inicio</a></li>
-                            <li class="<?php echo ($_GET['solicitud'] == 'acerca') ? 'active' : '' ?>"><a href="acerca">Sobre nosotros</a></li>
-                            <li class="<?php echo ($_GET['solicitud'] == 'comprar') ? 'active' : '' ?>"><a href="comprar">Comprar</a></li>
+                            <li class="<?php echo ($_SERVER['REQUEST_URI'] == '/') ? 'active' : '' ?>"><a href="/">Inicio</a></li>
+                            <li class="<?php echo ($_SERVER['REQUEST_URI'] == '/acerca') ? 'active' : '' ?>"><a href="/acerca">Sobre nosotros</a></li>
+                            <li class="<?php echo ($_SERVER['REQUEST_URI'] == '/comprar') ? 'active' : '' ?>"><a href="comprar">Comprar</a></li>
                             <li><a href="#">Páginas</a>
                                 <ul class="dropdown">
                                     <li class="active" ><a href="detalles-compra">Detalles de compra</a></li>
@@ -123,8 +124,8 @@
                                     <li><a href="detalles-blog">Detalles del blog</a></li>
                                 </ul>
                             </li>
-                            <li class="<?php echo ($_GET['solicitud'] == 'blog') ? 'active' : '' ?>"><a href="blog">Blog</a></li>
-                            <li class="<?php echo ($_GET['solicitud'] == 'contacto') ? 'active' : '' ?>"><a href="contacto">Contacto</a></li>
+                            <li class="<?php echo ($_SERVER['REQUEST_URI'] == '/blog') ? 'active' : '' ?>"><a href="blog">Blog</a></li>
+                            <li class="<?php echo ($_SERVER['REQUEST_URI'] == '/contacto') ? 'active' : '' ?>"><a href="contacto">Contacto</a></li>
                         </ul>
                     </nav>
                 </div>

@@ -1,8 +1,8 @@
 <?php
 	//Datos de la conexión
-	define( "HOST",     "localhost" );
+	define( "HOST",     "db" );
 	define( "USER",     "root" );
-	define( "PASSWORD", "" );
+	define( "PASSWORD", "dorime" );
 	define( "DATABASE", "pastelitos" );	
 	
 	
@@ -15,7 +15,7 @@
 		//Establecer la conexión o indicar errores
 		private function __construct()
 		{
-			$this->_connection = new mysqli( HOST, USER, PASSWORD, DATABASE );
+			$this->_connection = new mysqli( HOST, USER, PASSWORD, DATABASE);
 			
 			if(mysqli_connect_error())
 			{

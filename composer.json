@@ -1,0 +1,17 @@
+{
+    "name": "luis10/mis-pastelitos",
+    "description": "Proyecto de e-comerce para postres",
+    "type": "project",
+    "authors": [
+        {
+            "name": "José Luis Quiroz Ulin",
+            "email": "josluisquirozulin@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+
+        }
+    }
+}

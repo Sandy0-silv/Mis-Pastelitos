@@ -1,5 +1,5 @@
 <?php
-	require_once("../modelo/modelo.php");
+	require_once("../models/modelo.php");
 	
 	function instancia( ){
 		$db=Database::getInstance();
