@@ -1,12 +1,13 @@
 <?php
+    
 
     class Routes{
-        
-        public static function inicio(){
 
+        public function __construct(){
             include ('views/template.html');
         }
-
+        
+      
         public static function route(){
             // var_dump($_SERVER['REQUEST_URI']);
             if(isset($_SERVER['REQUEST_URI'])){
@@ -18,11 +19,13 @@
                     case "/carrito-compras":include('views/shoping-car.html');break;
                     case "/detalles-facturacion":include('views/checkout.html');break;
                     case "/lista-de-deseos":include('views/wisslist.html');break;
-                    case "/clases":include('views/clases.html');break;
+                    case "/clases":include('views/class.html');break;
                     case "/blog":include('views/blog.html');break;
                     case "/contacto":include('views/contact.html');break;
                     case "/detalles-blog":include('views/blog-details.html');break;
                     case "/registro":include('views/register.html');break;
+                    case "/acceder":include('views/login.html');break;
+                    case "/home":include('views/home.html');break;
                     default:include('views/404.html');
                 }
                 

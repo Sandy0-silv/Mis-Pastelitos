@@ -27,19 +27,19 @@
                             <div class="col-md-4">
                                 <div class="checkout__input">
                                     <p>Nombre<span>*</span></p>
-                                    <input name="nombre" type="text">
+                                    <input name="nombre" type="text"  required>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="checkout__input">
                                     <p>Apellido Paterno<span>*</span></p>
-                                    <input name="apellido1" type="text">
+                                    <input name="apellido1" type="text"  required>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="checkout__input">
-                                    <p>Apellidos Materno<span>*</span></p>
-                                    <input name="apellido2" type="text">
+                                    <p>Apellido Materno<span>*</span></p>
+                                    <input name="apellido2" type="text"  required>
                                 </div>
                             </div>
                         </div>
@@ -47,38 +47,34 @@
                             <div class="col-md-4">
                                 <div class="checkout__input">
                                     <p>Teléfono<span>*</span></p>
-                                    <input name="telefono" type="text">
+                                    <input name="telefono" type="number" maxlength="10"required>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="checkout__input">
                                     <p>Correo<span>*</span></p>
-                                    <input name="email" type="text">
+                                    <input name="email" type="email" required>
                                 </div>
                             </div>
 
                             <div class="col-md-2">
                                 <div class="checkout__input">
                                     <p>Edad<span>*</span></p>
-                                    <input name="edad" type="text">
+                                    <input name="edad" type="number" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="checkout__input">
-                                    <p>Usuario<span>*</span></p>
-                                    <input name="usuario" type="text">
-                                </div>
-                            </div>
+                            
 
                             <div class="col-md-6">
                                 <div class="checkout__input">
-                                    <p>Password<span>*</span></p>
-                                    <input name="contrasenia" type="text">
+                                    <p>Contraseña<span>*</span></p>
+                                    <input name="contrasenia" type="password" minlength="8" required>
                                 </div>
                             </div>
+                            
 
                             <input class="btn btn-primary btn-block" type="submit" value="Registrarse">
 

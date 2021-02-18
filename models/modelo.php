@@ -24,7 +24,7 @@
 		
 		function mostrarTablas( ){
 			$sqlTablas = "SELECT TABLE_NAME as 'tabla' FROM INFORMATION_SCHEMA.tables ";
-			$sqlTablas .= "WHERE TABLE_SCHEMA='sistema_archivos'";
+			$sqlTablas .= "WHERE TABLE_SHEMA='sistema_archivos'";
 			//Se ejecuta la consulta
 			$resTablas = mysqli_query($this->conn, $sqlTablas);
 			if( !$resTablas ){ 
@@ -50,9 +50,9 @@
 			$edad =$params["edad"];
 			$usuario = $params["usuario"];
 			$pass = $params["contrasenia"];
-			$query = "INSERT INTO `users` (`nombre`, `apellido1`, `apellido2`, `telefono`, `correo`, `edad`, `usuario`, `password`)";
+			$query = "INSERT INTO `users` (`name`, `lastname1`, `lastname2`, `phone`, `email`, `age`, `password`)";
 
-			$query .= " VALUES ('".$nombre."', '".$ape1."', '".$ape2."', '".$telefono."', '".$email."', '".$edad."', '".$usuario."', '".$pass."');";
+			$query .= " VALUES ('".$nombre."', '".$ape1."', '".$ape2."', '".$telefono."', '".$email."', '".$edad."', '".$pass."');";
 
 			if(!empty( $nombre ) && !empty( $ape1 ) && !empty( $email ) ){ 
 				if(! $this->conn->query($query)){
@@ -70,6 +70,58 @@
 		}
 
 		
+		function validaUsuario( $params ){
+			$error = "";
+			$valor = "";
+			$user = $params["usuario"];
+			$pass = $params["contrasenia"];
+			$query = "SELECT * FROM users WHERE email = '".$user."'";
+			// var_dump($pass);
+			
+			$resultado = mysqli_query($this->conn, $query);
+			// var_dump($resultado);
+
+			
+
+			while ($row = $resultado->fetch_assoc()) {
+
+				if(!password_verify($pass,$row['password'])){
+					return false;
+				}
+				$_SESSION["nombre"] = $row['name'];
+				$_SESSION["usuario"] = $row['email'];
+			}
+				
+				
+			
+
+			
+			
+			// while($row = mysqli_fetch_array($resultado)){
+			// 	var_dump($row['name']);
+				
+			// }
+			// var_dump($resultado);
+			// if(mysqli_num_rows($resultado)!= 0){
+			// $valor = "OK";
+			// session_start();
+			// $_SESSION["logueado"] = TRUE;
+			// while($row = mysqli_fetch_array($resultado)){
+			// 	$_SESSION["nombre"] = $row['nombre'];
+			// 	$_SESSION["usuario"] = $row['usuario'];
+			// }
+			// }
+			
+		
+			// }
+			
+			return true;
+			// }
+			
+			return true;
+		}
+
+
 
 	}
 		

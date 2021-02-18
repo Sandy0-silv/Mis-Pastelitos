@@ -1,4 +1,4 @@
 <?php
     require('controllers/rutas.php');
-    Routes::inicio();
+    new Routes();
 ?>

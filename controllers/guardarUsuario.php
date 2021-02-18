@@ -12,7 +12,7 @@ $params = array(
     "email" => $_POST['email'],
     "email" => $_POST['email'],
     "usuario" => $_POST['usuario'],
-    "contrasenia" => $_POST['contrasenia'],
+    "contrasenia" => password_hash($_POST['contrasenia'], PASSWORD_DEFAULT),
     "edad" => $_POST['edad'],
 );
 
