@@ -87,6 +87,19 @@
                                     <li><a href="/acceder">Acceder</a> <span class="arrow_carrot-down"></span>
 
                                     </li>
+
+                                    <?php
+                                    if (isset($_SESSION["nombre"])) {
+                                        ?>
+
+                                        <li><a href="../controllers/logout.php">Salir</a> <span class="arrow_carrot-down"></span></li>
+                                        <?php
+                                    }
+                                    ?>
+
+                                    
+
+                                    
                                 </ul>
                             </div>
                             <div class="header__logo">

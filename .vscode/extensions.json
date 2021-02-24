@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "ms-vsliveshare.vsliveshare-audio"
+        "ms-vsliveshare.vsliveshare-audio",
+        "phiter.phpstorm-snippets"
     ]
 }

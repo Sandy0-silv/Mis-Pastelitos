@@ -10,6 +10,9 @@
     //Borrar los datos de la sesion actual
     session_destroy();
 
+    //redireccionar al index
+    header("Location: /");
+    
     
 
 ?>

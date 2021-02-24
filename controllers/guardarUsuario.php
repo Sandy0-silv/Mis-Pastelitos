@@ -36,7 +36,7 @@ if(empty($valor)){
 } else{
     echo "Usuario Registrado";
     echo "<script>alert('Usuario registrado exitosamente');
-  window.location.href='/';
+  window.location.href='/home';
 </script>";
 }
 ?>

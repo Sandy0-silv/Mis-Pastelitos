@@ -1,10 +1,11 @@
 <?php
 namespace Controllers\RegistrarUsuario;
-// require("../../models/RegistrarUsuario/RegistrarUsuarioModel.php");
 
 use Models\RegistrarUsuario\RegistrarUsuarioModel;
+// require("../../models/RegistrarUsuario/RegistrarUsuarioModel.php");
 
-class GuardarUsuario{
+
+class RegistrarUsuarioController{
      
 
     public function register(){
@@ -35,7 +36,7 @@ class GuardarUsuario{
 
 }
 
-$hi=new GuardarUsuario();
+$hi=new RegistrarUsuarioController();
 $hi->register();
 
 
