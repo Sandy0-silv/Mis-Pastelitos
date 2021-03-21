@@ -53,8 +53,7 @@ class Routes
                         } 
                         else {
                             include 'views/index.html';
-                        } 
-     break;
+                        }; break;
                 case "/home":
                     // echo $_SESSION["nombre"];
                     if (isset($_SESSION["nombre"])) {

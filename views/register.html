@@ -17,7 +17,7 @@
     <div class="container">
 
         <div class="checkout__form">
-            <form action="controllers/guardarUsuario.php" method="POST">
+            <form action="controllers/guardarUsuario.php" method="POST" onreset="confirmation()">
                 <div class="row">
                     <div class="col-md-12">
                         <h6 class="coupon__code"></h6>
@@ -77,6 +77,7 @@
                             
 
                             <input class="btn btn-primary btn-block" type="submit" value="Registrarse">
+                            <input class="btn btn-secondary btn-block" type="reset">
 
 
                         </div>
@@ -92,3 +93,9 @@
     </div>
 </section>
 <!-- Checkout Section End -->
+
+<script>
+    function confirmation(){
+        window.confirm("¿Quieres restablecer los campos?");
+    }
+</script>

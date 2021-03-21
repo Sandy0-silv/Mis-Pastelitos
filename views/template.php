@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<!-- <h1><?php  ?></h1> -->
+<!-- <h1><?php ?></h1> -->
     <!-- Page Preloder -->
     <!-- <div id="preloder">
         <div class="loader"></div>
@@ -55,7 +55,7 @@
         <div id="mobile-menu-wrap"></div>
         <div class="offcanvas__option">
             <ul>
-                
+
                 <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
             </ul>
         </div>
@@ -89,17 +89,17 @@
                                     </li>
 
                                     <?php
-                                    if (isset($_SESSION["nombre"])) {
-                                        ?>
+if (isset($_SESSION["nombre"])) {
+    ?>
 
-                                        <li><a href="../controllers/logout.php">Salir</a> <span class="arrow_carrot-down"></span></li>
+                                        <li><a onclick="confirmacion()" href="../controllers/logout.php">Salir</a><span class="arrow_carrot-down"></span></li>
                                         <?php
-                                    }
-                                    ?>
+}
+?>
 
-                                    
 
-                                    
+
+
                                 </ul>
                             </div>
                             <div class="header__logo">
@@ -150,8 +150,8 @@
     </header>
     <div>
         <?php
-        Routes::route();
-        ?>
+Routes::route();
+?>
     </div>
 
 
@@ -233,6 +233,15 @@
     <!-- Search End -->
 
 </body>
+
+<script>
+    function confirmacion(){
+        if (window.confirm("Usted está a punto de abandonar la página.")) { 
+            window.alert('Gracias por visitarnos, ¡vuelva pronto!');
+        }
+    }
+    
+</script>
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
