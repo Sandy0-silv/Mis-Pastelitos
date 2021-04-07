@@ -242,6 +242,38 @@ Routes::route();
     }
     
 </script>
+
+<script>
+    function idleLogout() {
+    var t;
+    window.onload = resetTimer;
+    window.onmousemove = resetTimer;
+    window.onmousedown = resetTimer;  // catches touchscreen presses as well      
+    window.ontouchstart = resetTimer; // catches touchscreen swipes as well 
+    window.onclick = resetTimer;      // catches touchpad clicks as well
+    window.onkeypress = resetTimer;   
+    window.addEventListener('scroll', resetTimer, true); // improved; see comments
+
+    function yourFunction() {
+        //alert("Has tardado mucho sin hacer nada");
+        <?php 
+        if(isset($_SESSION['nombre']) && isset($_SESSION['usuario'])){
+            ?>
+            alert("Su sesión ha sido finalizada debido al tiempo de inactividad" );
+            window.location.href = '../controllers/logout.php';
+            <?php
+        }
+        ?>
+        
+    }
+
+    function resetTimer() {
+        clearTimeout(t);
+        t = setTimeout(yourFunction, 3000);  // time is in milliseconds
+    }
+}
+idleLogout();
+</script>
 <!-- Js Plugins -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
